@@ -10,8 +10,8 @@ export const Person = (props: personProps) => {
   
   return (
     <div>human sample
-      {/* <div>{props.name.first}</div>
-      <div>{props.name.last}</div> */}
+      <div>{props.name.first}</div>
+      <div>{props.name.last}</div>
     </div>
   )
 }
