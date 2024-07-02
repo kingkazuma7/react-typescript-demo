@@ -1,4 +1,4 @@
-type GreetProps = {
+type GreetProps = { // string, number, boolean
   name: string,
   age: number,
   isLoggedIn: boolean,

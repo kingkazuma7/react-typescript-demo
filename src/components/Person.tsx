@@ -1,4 +1,4 @@
-type personProps = {
+type personProps = { // オブジェクト
   name: {
     first: string,
     last: string,
