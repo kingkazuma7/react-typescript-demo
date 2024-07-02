@@ -1,10 +1,18 @@
 type GreetProps = {
-  name: string
+  name: string,
+  age: number,
+  isLoggedIn: boolean,
 }
 
 
 export const Greet = (props: GreetProps) => {
   return (
-    <div>Hello! {props.name}</div>
+    <div>
+      {
+        props.isLoggedIn ? 
+        `Hello! ${props.name}, age ${props.age}` : 
+        'Welcome, Guest'
+      }
+    </div>
   )
 }
