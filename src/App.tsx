@@ -1,5 +1,7 @@
 import './App.css';
 import { Greet } from './components/Greet';
+import { Heading } from './components/Heading';
+import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
@@ -32,6 +34,11 @@ function App() {
       <Status status='loading' />
       <Status status='success' />
       <Status status='error' />
+      <Heading>Headingのテキスト</Heading>
+      <Oscar>
+        <Heading>Oscarの子</Heading>
+      </Oscar>
+      <Greet name='zoro' isLoggedIn={true} />
     </div>
   );
 }
