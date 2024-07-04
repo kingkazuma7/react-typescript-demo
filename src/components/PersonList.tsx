@@ -5,7 +5,7 @@ type PersonListProps = { // 配列
 }
 
 export const PersonList = (props: PersonListProps) => {
-  console.log(props);
+  // console.log(props);
   
   return (
     <div>

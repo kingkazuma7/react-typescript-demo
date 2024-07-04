@@ -1,7 +1,7 @@
 import { personProps } from './Person.types';
 
 export const Person = (props: personProps) => {
-  console.log(props);
+  // console.log(props);
   
   return (
     <div>human sample

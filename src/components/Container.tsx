@@ -3,7 +3,7 @@ type ContainerProps = {
 }
 
 export const Container = (props: ContainerProps) => {
-  console.log(props);
+  // console.log(props);
   
   return (
     <div style={props.styles}>Container</div>
