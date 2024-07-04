@@ -33,7 +33,7 @@ function App() {
       {/* <Greet name='nasio' age={30} isLoggedIn={true} /> */}
       {/* <Greet name='nasio2' age={20} isLoggedIn={false} /> */}
       {/* <Person name={personName} /> */}
-      {/* <PersonList names={nameList} /> */}
+      <PersonList names={nameList} />
       {/* <Status status='loading' /> */}
       {/* <Status status='success' /> */}
       {/* <Status status='error' /> */}
