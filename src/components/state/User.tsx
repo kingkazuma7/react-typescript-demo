@@ -6,7 +6,7 @@ type AuthUser = {
 }
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser>({} as AuthUser); // 型アサーション
   const handleLogin = () => {
     setUser({ // nullを型推論する
       name: 'John Doe',
@@ -15,7 +15,7 @@ export const User = () => {
     console.log("in");
   }
   const handleLogout = () => {
-    setUser(null);
+    setUser({} as AuthUser);
     console.log("out");
   }
 
@@ -25,7 +25,6 @@ export const User = () => {
       <button onClick={handleLogout}>ログアウト</button>
       <div>ユーザー名は{user?.name}</div>
       <div>ユーザーメールは{user?.email}</div>
-      <div></div>
     </div>
   )
 }
