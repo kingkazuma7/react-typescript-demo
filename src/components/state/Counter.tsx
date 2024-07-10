@@ -3,10 +3,15 @@ import { useReducer } from "react"
 type CounterState = {
   count: number;
 }
-type CounterAction = {
-  type: string;
+// 更新アクション 以下のように分けるリデューサーで推奨される
+type UpdateAction = {
+  type: 'increment' | 'decrement';
   payload: number;
 }
+type ResetAction = {
+  type: 'reset';
+}
+type CounterAction = UpdateAction | ResetAction;
 
 const initialState: CounterState = { count: 0 }
 
@@ -16,8 +21,10 @@ function reducer(state: CounterState, action: CounterAction) { // 状態管理
       return { count: state.count + action.payload }
     case 'decrement':
       return { count: state.count - action.payload }
+    case 'reset':
+      return initialState
     default:
-      throw new Error(`Unhandled action type: ${action.type}`);
+      return state
   }
 }
 
@@ -29,6 +36,7 @@ export const Counter = () => {
       カウント: {state.count}
       <button onClick={() => dispatch({ type: 'increment', payload: 10 })}>インクリメント10</button>
       <button onClick={() => dispatch({ type: 'decrement', payload: 10 })}>デクリメント10</button>
+      <button onClick={() => dispatch({ type: 'reset' })}>リセット</button>
     </div>
   )
 }
