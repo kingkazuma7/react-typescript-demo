@@ -9,11 +9,12 @@ import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Counter } from './components/state/Counter';
 import { LoggedIn } from './components/state/LoggedIn';
-import { User } from './components/state/User';
+// import { User } from './components/state/User';
 import { Status } from './components/Status';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
-
+import { User } from './components/context/User';
+import { UserContextProvider } from './components/context/UserContext';
 
 function App() {
   const personName = {
@@ -54,11 +55,15 @@ function App() {
       <Input value='' handleChange={(event) => console.log(event.nativeEvent)} />
       <Container styles={{ border: '1px solid black', padding: '1rem', fontSize: '2rem' }} />
       <LoggedIn />
-      <User />
+      {/* <User /> */}
       <Counter />
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+        <Box />
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
